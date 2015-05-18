@@ -1,0 +1,479 @@
+/* COLORS */
+/* BORDERS */
+/* TEXT */
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,600,700);
+body {
+  background-color: black;
+}
+
+div, section {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  height: inherit;
+  box-sizing: border-box;
+}
+
+p, span {
+  color: white;
+  font-family: 'Raleway';
+  font-weight: 600;
+  margin: 5px;
+  cursor: default;
+}
+
+i {
+  vertical-align: top;
+}
+
+.juno {
+  background-color: #5a5f66;
+  margin: auto;
+  width: 1024px;
+  border-radius: 8px;
+}
+
+h4 {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  margin: 0;
+}
+
+.readme {
+  text-align: center;
+  margin: 10px;
+}
+
+.readme__title {
+  color: #cc3300;
+}
+
+.readme__link {
+  color: white;
+}
+.readme__link:hover {
+  color: #cc3300;
+}
+
+.module-container {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.control {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.module-row {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.module {
+  text-align: center;
+  height: 300px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 -3px;
+}
+.module.one {
+  width: 10%;
+}
+.module.two {
+  width: 15%;
+}
+.module.three {
+  width: 20%;
+}
+.module.four {
+  width: 30%;
+}
+.module.five {
+  width: 35%;
+}
+.module.six {
+  width: 40%;
+}
+.module.seven {
+  width: 50%;
+}
+
+.module__header, .module__header--first, .module__header--left-corner, .module__header--last, .module__header--right-corner {
+  text-align: center;
+  line-height: 30px;
+  background: linear-gradient(0deg, #8e3011, #bc4016);
+  height: 10%;
+  margin: 0 3px;
+  width: 100%;
+}
+
+.module__header--first, .module__header--left-corner {
+  background: linear-gradient(90deg, #8e3011, #bc4016);
+  margin-left: 0;
+}
+
+.module__header--left-corner {
+  border-top-left-radius: 10px;
+}
+
+.module__header--right-corner {
+  border-top-right-radius: 10px;
+}
+
+.module__header--last, .module__header--right-corner {
+  background: linear-gradient(270deg, #8e3011, #bc4016);
+  margin-right: 0;
+}
+
+.module__back {
+  height: 88%;
+  margin: 2px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.module__control-group, .module__control-group--left-corner, .module__control-group--right-corner, .module__switch-control-group {
+  height: 88%;
+  flex: 1 0 auto;
+}
+.module__control-group:nth-child(2), .module__control-group--left-corner:nth-child(2), .module__control-group--right-corner:nth-child(2), .module__switch-control-group:nth-child(2) {
+  border-left: 2px solid white;
+}
+.module__control-group:last-child, .module__control-group--left-corner:last-child, .module__control-group--right-corner:last-child, .module__switch-control-group:last-child {
+  border-right: 2px solid white;
+}
+
+.module__control-group--left-corner {
+  border-bottom-left-radius: 10px;
+}
+
+.module__control-group--right-corner {
+  border-bottom-right-radius: 10px;
+}
+
+.module__switch-control-group {
+  flex: 0 1 10%;
+  margin-top: 6px;
+}
+
+.fader-container, .fader-container--slim {
+  height: 75%;
+  width: 95%;
+  margin: auto;
+  display: inline-block;
+}
+
+.fader-container--slim {
+  width: 55%;
+}
+
+.fader__scale, .fader__scale--light, .fader__scale--heavy, .fader__scale--hpf {
+  height: 100%;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  align-self: center;
+}
+
+.fader__scale--light {
+  background: repeating-linear-gradient(0deg, white, white 1px, transparent 1px, transparent 20px);
+}
+
+.fader__scale--heavy {
+  position: absolute;
+  left: 2.5%;
+  background: repeating-linear-gradient(0deg, white, white 3px, transparent 3px, transparent 100px);
+}
+
+.fader__scale--hpf {
+  background: repeating-linear-gradient(0deg, white, white 2px, transparent 3px, transparent 50px);
+  margin-top: -20px;
+  width: 75%;
+}
+.fader__scale--hpf > .fader__slot {
+  margin-top: 50px;
+}
+.fader__scale--hpf > .fader__slot > .fader__knob {
+  transition: top 0.1s;
+}
+
+.fader {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.fader__slot {
+  width: 10px;
+  background-color: black;
+  height: 89%;
+  margin: 10% auto 0 auto;
+  border-radius: 8px;
+  align-self: center;
+  position: relative;
+}
+
+.env .fader__slot {
+  margin-top: 10px;
+}
+
+.fader__knob {
+  position: absolute;
+  top: 95%;
+  left: -17px;
+  background-color: #33353c;
+  border-radius: 5px;
+  width: 44px;
+  height: 22px;
+  display: flex;
+  align-self: flex-start;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px black;
+}
+.fader__knob:hover {
+  box-shadow: 1px 1px 2px black, 0 0 7px white;
+}
+.fader__knob.dragging {
+  border: 1px dashed #cc3300;
+  box-shadow: 0 0 7px white;
+}
+
+hr {
+  width: 100%;
+  background-color: #cfcfcf;
+  border-radius: 2px;
+  font-weight: 200;
+  height: 2px;
+}
+
+.button, .button--orange, .button--yellow {
+  height: 35px;
+  width: 55px;
+  margin: 10px 3px 3px 3px;
+  align-self: center;
+  border-radius: 2px;
+  opacity: .8;
+  cursor: pointer;
+}
+.button:first-of-type, .button--orange:first-of-type, .button--yellow:first-of-type {
+  margin: 80px 3px 3px 3px;
+}
+.button.pressed, .pressed.button--orange, .pressed.button--yellow {
+  opacity: 1;
+}
+.button:hover, .button--orange:hover, .button--yellow:hover {
+  box-shadow: 0 0 7px white;
+}
+
+.button--orange {
+  background: linear-gradient(0deg, #ff7f00, #ff9933);
+}
+
+.button--yellow {
+  background: linear-gradient(0deg, #ffcf70, #ffe0a3);
+}
+
+.button--midi {
+  height: 30px;
+  padding-top: 5px;
+  width: 60px;
+  display: inline-block;
+  margin: 5px;
+  background-color: maroon;
+  color: white;
+  border-radius: 4px;
+  opacity: .7;
+}
+.button--midi.pressed {
+  box-shadow: 0 0 7px white;
+  opacity: 1;
+}
+
+.button-container, .knob-container--range, .knob-container--vcf, .knob-container--pwm, .knob-container--vca {
+  display: flex;
+  justify-content: center;
+  height: 75%;
+}
+
+.button-container--top {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.switch {
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  height: 40px;
+  width: 10px;
+  background-color: black;
+  margin: 15px auto;
+}
+
+.switch__knob {
+  background-color: white;
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+  height: 15px;
+  transition: all .1s;
+  cursor: pointer;
+}
+.switch__knob:hover {
+  box-shadow: 0 0 20px maroon;
+}
+.switch__knob.dragging {
+  box-shadow: 0 0 15px maroon;
+  border: 1px solid #cc3300;
+}
+
+.knob-container--range {
+  position: relative;
+  margin-top: 60px;
+  display: flex;
+  flex-flow: column wrap;
+  height: 110px;
+}
+.knob-container--range .switch {
+  height: 80px;
+  position: relative;
+}
+
+.knob-container--vcf, .knob-container--pwm, .knob-container--vca {
+  position: relative;
+  top: 41px;
+  margin: 50px auto 0;
+  height: 38%;
+  display: inline-block;
+}
+
+.knob-container--pwm, .knob-container--vca {
+  top: 0;
+  margin-top: 3px;
+}
+.knob-container--pwm > .line, .knob-container--vca > .line {
+  margin-top: -2px;
+}
+
+.knob-container--vca {
+  vertical-align: top;
+  top: 40px;
+}
+
+.label, .label--line {
+  display: inline-block;
+  margin: 0 5%;
+  font-size: 15px;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.label--wide {
+  display: inline-block;
+  margin: 0 9.5%;
+}
+
+.label--line {
+  margin: 0;
+}
+
+.wave-label {
+  font-size: 15px;
+  display: inline-block;
+  margin: 5px 0 20px;
+}
+
+.label-container {
+  height: 10%;
+  margin: 15px 0 0 0;
+}
+
+.led, .led--lit {
+  background-color: maroon;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin: 35px auto;
+}
+
+.led--lit {
+  background-color: #cc3300;
+  box-shadow: 0px 0px 8px #cc3300;
+}
+
+.line {
+  width: 2px;
+  background-color: white;
+  margin: auto;
+  height: 65px;
+}
+
+.range {
+  margin-top: 8px;
+}
+
+.key-label, .key-label--white, .key-label--black {
+  font-size: 20px;
+  position: absolute;
+  opacity: 0.6;
+  bottom: 5%;
+  font-family: 'Audiowide', cursive;
+  cursor: pointer;
+}
+
+.key-label--white {
+  color: black;
+  left: 30%;
+  text-shadow: 1px 1px 1px black;
+}
+
+.key-label--black {
+  color: white;
+  left: 15%;
+  text-shadow: 1px 1px 1px white;
+}
+
+.keyboard-container {
+  list-style: none;
+  width: 1020px;
+  margin: 0 1.5%;
+  position: relative;
+}
+
+.white-key, .white-key--playing, .black-key, .black-key--playing {
+  position: absolute;
+  display: inline-block;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: background-color 0.1s ease-out;
+  cursor: pointer;
+}
+
+.white-key, .white-key--playing {
+  background-color: white;
+  height: 100px;
+  width: 66px;
+  border: 1px solid black;
+  z-index: 1;
+}
+
+.black-key, .black-key--playing {
+  background-color: black;
+  height: 60px;
+  width: 40px;
+  z-index: 2;
+}
+
+.white-key--playing {
+  background-color: #cc3300;
+}
+
+.black-key--playing {
+  background-color: maroon;
+}
